@@ -81,6 +81,20 @@
     </div>
   </div>
   <!-- /ko -->
+  <!-- ko if: $root.deleteImage !== null -->
+  <div data-drop-content="Drop here" class="img-dropzone pane uploadzone" data-bind="attr: { 'data-drop-content': $root.t('Drop here') }, fudroppable: { activeClass: 'ui-state-highlight', hoverClass: 'ui-state-draghover' }, droppable: { options: { accept: '.image', activeClass: 'ui-state-highlight', hoverClass: 'ui-state-draghover' }, data: $root.deleteImage }">
+    <div class="mo-uploadzone" style="position: relative; padding: 2em; border: 2px dotted #808080">
+      <span data-bind="text: $root.t('Drag image here to delete')">Drag image here to delete</span>
+    </div>
+  </div>
+  <!-- /ko -->
+  <!-- ko if: $root.deleteAllImages !== null -->
+  <div data-bind="buttonset: {}" style="float: right;">
+      <a href="#", data-bind="text: $root.t('Delete all images'), click: $root.deleteAllImages">
+          Delete all images
+      </a>
+  </div>
+  <!-- /ko -->
 
 </div>
 

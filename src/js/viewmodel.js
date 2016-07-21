@@ -568,6 +568,7 @@ function initializeEditor(content, blockDefs, thumbPathConverter, galleryUrl) {
     viewModel.galleryRecent.unshift(img);
     // select recent gallery tab
     viewModel.selectedImageTab(0);
+    viewModel.loadGallery();
   };
 
   viewModel.dialog = function(selector, options) {
@@ -586,6 +587,9 @@ function initializeEditor(content, blockDefs, thumbPathConverter, galleryUrl) {
     }
   }, viewModel, 'change');
 
+
+  viewModel.deleteImage = null;
+  viewModel.deleteAllImages = null;
   return viewModel;
 
 }
